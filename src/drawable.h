@@ -1,0 +1,17 @@
+#pragma once
+
+#include "SFML/Graphics.hpp"
+#include <string>
+
+class MyDrawable
+{
+
+private:
+    sf::Texture texture;
+protected:
+    sf::Sprite sprite;
+    MyDrawable(std::string filePath);
+public:
+    sf::Sprite& getSprite();
+    virtual void move(sf::Vector2f& finalPos) = 0;
+};
