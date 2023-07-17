@@ -12,6 +12,7 @@ protected:
     sf::Sprite sprite;
     MyDrawable(std::string filePath);
 public:
-    sf::Sprite& getSprite();
+    const sf::Sprite &getSprite() const;
     virtual void move(sf::Vector2f& finalPos) = 0;
+    MyDrawable() = delete;
 };

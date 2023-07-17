@@ -6,7 +6,7 @@ MyDrawable::MyDrawable(std::string filePath)
     sprite.setTexture(texture);
 }
 
-sf::Sprite& MyDrawable::getSprite()
+const sf::Sprite& MyDrawable::getSprite() const
 {
     return sprite;
 }
